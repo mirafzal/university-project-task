@@ -28,7 +28,21 @@
             $('#calendar').fullCalendar({
                 // put your options and callbacks here
                 events: events,
-
+                // header: {
+                //     center: 'agendaWeek',
+                // },
+                defaultView : 'agendaWeek',
+                minTime: '08:00',
+                maxTime: '23:00',
+                timeFormat: 'H:mm',
+                views: {
+                    agendaWeek: {
+                        slotLabelFormat: [
+                            'H:mm'
+                        ],
+                        allDaySlot: false
+                    }
+                },
 
             })
         });
