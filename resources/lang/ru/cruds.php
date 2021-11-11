@@ -125,4 +125,8 @@ return [
             'end_time_helper'   => ' ',
         ],
     ],
+    'checkRoomAvailability' => [
+        'title'          => 'Check room availability',
+        'title_singular' => 'Check room availability',
+    ],
 ];

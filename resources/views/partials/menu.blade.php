@@ -87,6 +87,16 @@
                 </a>
             </li>
         @endcan
+        @can('check_room_availability_access')
+            <li class="c-sidebar-nav-item">
+                <a href="{{ route("admin.check-room-availabilities.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/check-room-availabilities") || request()->is("admin/check-room-availabilities/*") ? "c-active" : "" }}">
+                    <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('cruds.checkRoomAvailability.title') }}
+                </a>
+            </li>
+        @endcan
         <li class="c-sidebar-nav-item">
             <a href="{{ route("admin.systemCalendar") }}" class="c-sidebar-nav-link {{ request()->is("admin/system-calendar") || request()->is("admin/system-calendar/*") ? "c-active" : "" }}">
                 <i class="c-sidebar-nav-icon fa-fw fas fa-calendar">

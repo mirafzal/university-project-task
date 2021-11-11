@@ -37,6 +37,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('lessons/destroy', 'LessonController@massDestroy')->name('lessons.massDestroy');
     Route::resource('lessons', 'LessonController');
 
+    // Check Room Availability
+    Route::delete('check-room-availabilities/destroy', 'CheckRoomAvailabilityController@massDestroy')->name('check-room-availabilities.massDestroy');
+    Route::resource('check-room-availabilities', 'CheckRoomAvailabilityController');
+
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
